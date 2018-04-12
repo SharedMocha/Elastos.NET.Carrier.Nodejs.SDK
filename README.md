@@ -38,24 +38,41 @@ Yes, we are working on the SDK for Android, iOS, Mac, Windows, Linux, Nodejs and
 Execute following command to install all pre-requirements.
 
 Build carrier native sdk
-Please goto https://github.com/elastos/Elastos.NET.Carrier.Native.SDK.
-Clone the code and build.
+Step1-
+Please goto https://github.com/elastos/Elastos.NET.Carrier.Native.SDK and perform Install and Build Steps.
+
+Step2-
 
 
 Install node
 ```shell
-$ cd $(SRC_ROOT)
+$ git clone https://github.com/elastos/Elastos.NET.Carrier.Nodejs.SDK.git
+$  cd $(SRC_ROOT)
 $ git clone --branch v9.10.0 https://github.com/nodejs/node.git
 $ cd node
+$sudo apt-get update
+$ sudo apt-get install python3.6
+$ sudo apt-get install build-essential 
 $ ./configure
 $ make
 $ make install
 ```
+sudo apt-get install build-essential :- For c/c++ compiler
 
 Check node version.
 ```shell
 $ node --version
 v9.10.0
+```
+If you run into issues getting node version then run below command
+```shell
+# Adding the NodeSource APT repository for Debian-based distributions repository AND the PGP key for verifying packages
+$ curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+
+# Install Node.js from the Debian-based distributions repository
+$ sudo apt-get install -y nodejs
+
+
 ```
 
 Install node-gype
