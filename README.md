@@ -86,6 +86,10 @@ Set the environment value about carrier native sdk header files and libraries pa
 ```shell
 export CARRIER_NATIVE_SDK=$(SRC_CARRIER_NATIVE_SDK_ROOT)/build/_dist/Linux-x86_64/debug
 ```
+OR
+```shell
+export CARRIER_NATIVE_SDK=/Hhome/ubuntu/.....add location of caerrier sdk....//build/_dist/Linux-x86_64/debug
+```
 if $(SRC_CARRIER_NATIVE_SDK_ROOT) is a relative path, please modify binding.gyp :
 "-L<!(echo $CARRIER_NATIVE_SDK)/lib" ==> "-L<(module_root_dir)/<!(echo $CARRIER_NATIVE_SDK)/lib"
 
